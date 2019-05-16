@@ -27,3 +27,28 @@ function anti_spam_deactivate()
         'status' => 'success',
     ];
 }
+
+function anti_spam_clientarea($vars) {
+ 
+    $lang = $vars['_lang'];
+
+    if ($vars['client']->emailVerified) {
+    	header('Location: clientarea.php');
+    	exit();
+    }
+ 
+    return [
+        'pagetitle' => $lang['title'],
+        'breadcrumb' => [
+        	'index.php?m=anti_spam' => $lang['breadcrumb']
+        ],
+
+        'templatefile' => 'activation',
+        'requirelogin' => true,
+        'vars' => [
+            'lang' => $lang,
+            'token' => $vars['token'],
+        ],
+    ];
+ 
+}
