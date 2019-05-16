@@ -3,9 +3,11 @@
 add_hook('ClientDetailsValidation', 1, function($vars) {
 	require __DIR__ . '/vendor/autoload.php';
 
-	$lang = $_SESSION['Language'];
+	global $CONFIG;
+	$lang = $CONFIG['Language'];
+	if (!$lang) $lang = 'english';
+	
 	require __DIR__ . "/lang/$lang.php";
-
 
   	$email = urlencode($vars['email']);
 	$client = new GuzzleHttp\Client();
