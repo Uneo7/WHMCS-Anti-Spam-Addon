@@ -12,3 +12,4 @@ $_ADDONLANG['sent'] = 'Message envoyé !';
 $_ADDONLANG['sending'] = 'Envoi du mail d\'activation ...';
 
 $_ADDONLANG['disposable'] = 'Cet email est invalide';
+$_ADDONLANG['proxy'] = 'Vous ne pouvez pas créer de compte depuis un proxy ou un VPN';

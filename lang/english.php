@@ -11,3 +11,4 @@ $_ADDONLANG['sent'] = 'Message sent !';
 $_ADDONLANG['sending'] = 'Sending activation mail ...';
 
 $_ADDONLANG['disposable'] = 'This email address is invalid';
+$_ADDONLANG['proxy'] = 'You can\'t create an account using a proxy or a VPS';

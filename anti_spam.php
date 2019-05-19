@@ -10,7 +10,22 @@ function anti_spam_config()
         'name' => 'AntiSpam Addon',
         'author' => 'Uneo7',
         'version' => '4.2',
-        'description' => 'Block disposable email addresses and enforce email validation'
+        'description' => 'Block disposable email addresses and enforce email validation',
+        'fields' => [
+            'proxy_check' => [
+                'FriendlyName' => 'Proxy / VPN Check',
+                'Type' => 'yesno',
+                'Size' => '25',
+                'Description' => 'Enable proxy/vpn cheking on register',
+            ],
+            'api_key' => [
+                'FriendlyName' => 'Anti proxy API key',
+                'Type' => 'text',
+                'Size' => '25',
+                'Default' => '',
+                'Description' => 'API key for <a href="https://proxycheck.io">proxycheck.io</a> (Not API key 100 query / day)',
+            ],
+        ]
     ];
 }
 
